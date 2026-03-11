@@ -2172,66 +2172,51 @@ html.lenis body {
 }
 
 @keyframes mapBounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-20px); }
+    60% { transform: translateY(-10px); }
+}
 
-    0%,
-    20%,
-    50%,
-    80%,
-    100% {
-        transform: translateY(0);
+/* Scroll Progress Indicator Enhancements */
+.scroll-progress-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: transparent;
+    z-index: 10001; /* Above header */
+    pointer-events: none;
+}
+
+.scroll-progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary) 0%, var(--accent) 100%);
+    width: 0%;
+    border-radius: 0 2px 2px 0;
+    transition: width 0.1s ease-out;
+}
+
+/* Mobile Swipe Gesture Animations for Cards */
+@media (max-width: 768px) {
+    .services-grid {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        padding-bottom: 2rem;
+        -webkit-overflow-scrolling: touch;
+        gap: 1.5rem;
+        /* Hide scrollbar for clean premium look */
+        -ms-overflow-style: none;
+        scrollbar-width: none;
     }
 
-    40% {
-        transform: translateY(-20px);
+    .services-grid::-webkit-scrollbar { display: none; }
+
+    .services-grid > div {
+        min-width: 85vw;
+        scroll-snap-align: center;
+        flex: 0 0 auto;
     }
-
-    60% {
-        transform: translateY(-10px);
-    }
-
-    /* Scroll Progress Indicator Enhancements */
-    .scroll-progress-container {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 4px;
-        background: transparent;
-        z-index: 10001;
-        /* Above header */
-        pointer-events: none;
-    }
-
-    .scroll-progress-bar {
-        height: 100%;
-        background: linear-gradient(90deg, var(--primary) 0%, var(--accent) 100%);
-        width: 0%;
-        border-radius: 0 2px 2px 0;
-        transition: width 0.1s ease-out;
-    }
-
-    /* Mobile Swipe Gesture Animations for Cards */
-    @media (max-width: 768px) {
-        .services-grid {
-            display: flex;
-            flex-wrap: nowrap;
-            overflow-x: auto;
-            scroll-snap-type: x mandatory;
-            padding-bottom: 2rem;
-            -webkit-overflow-scrolling: touch;
-            gap: 1.5rem;
-            /* Hide scrollbar for clean premium look */
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
-
-        .services-grid::-webkit-scrollbar {
-            display: none;
-        }
-
-        .services-grid>div {
-            min-width: 85vw;
-            scroll-snap-align: center;
-            flex: 0 0 auto;
-        }
-    }
+}
