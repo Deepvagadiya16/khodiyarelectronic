@@ -1,22 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Expert LED & LCD TV Repair in Junagadh. Khodiyar Electronics provides fast, affordable, and reliable component-level repair for all major brands.">
+    <meta name="description"
+        content="Expert LED & LCD TV Repair in Junagadh. Khodiyar Electronics provides fast, affordable, and reliable component-level repair for all major brands.">
     <title>Khodiyar Electronics | Expert TV Repair in Junagadh</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+
     <!-- Phosphor Icons -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
+    <!-- Animated Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-icon-container">
+            <i class="ph-fill ph-television loading-tv-icon"></i>
+            <div class="loading-glow"></div>
+        </div>
+        <h2 class="loading-text">Starting up...</h2>
+    </div>
+
+
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress-container">
+        <div class="scroll-progress-bar" id="scroll-progress"></div>
+    </div>
 
     <!-- Sticky Header -->
     <header class="header">
@@ -25,7 +44,7 @@
                 <i class="ph-fill ph-television"></i>
                 Khodiyar Electronics
             </a>
-            
+
             <!-- Mobile Menu Toggle -->
             <button class="mobile-menu-btn" aria-label="Toggle Menu">
                 <i class="ph ph-list"></i>
@@ -37,6 +56,9 @@
                 <a href="#services" class="nav-link">Services</a>
                 <a href="#about" class="nav-link">About</a>
                 <a href="#contact" class="nav-link">Contact</a>
+                <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle Dark Mode">
+                    <i class="ph-fill ph-moon"></i>
+                </button>
                 <a href="tel:9925036642" class="btn btn-primary nav-cta">
                     <i class="ph-fill ph-phone-call"></i> Call 9925036642
                 </a>
@@ -47,9 +69,16 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-overlay"></div>
+        <!-- Floating Icons -->
+        <i class="ph-fill ph-wrench float-icon icon-1"></i>
+        <i class="ph-fill ph-circuitry float-icon icon-2"></i>
+        <i class="ph-fill ph-television float-icon icon-3"></i>
+        <i class="ph-fill ph-gear float-icon icon-4"></i>
+
         <div class="container hero-content">
             <h1>Expert LED & LCD TV Repair in Junagadh</h1>
-            <p>Fast, affordable, and reliable television repair for all major brands. Fix your TV today instead of buying a costly replacement.</p>
+            <p>Fast, affordable, and reliable television repair for all major brands. Fix your TV today instead of
+                buying a costly replacement.</p>
             <div class="hero-buttons">
                 <a href="tel:9925036642" class="btn btn-accent btn-large">
                     <i class="ph-fill ph-phone-call"></i> Call Now
@@ -58,16 +87,25 @@
                     Get TV Repair
                 </a>
             </div>
-            <div class="hero-trust">
+            <div class="hero-trust reveal" style="transition-delay: 0.4s;">
                 <span class="trust-badge"><i class="ph-fill ph-check-circle"></i> Multi-brand repair</span>
                 <span class="trust-badge"><i class="ph-fill ph-check-circle"></i> Skilled technician</span>
                 <span class="trust-badge"><i class="ph-fill ph-check-circle"></i> Fast service</span>
             </div>
         </div>
+        <!-- SVG Wave Divider -->
+        <div class="wave-divider">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                preserveAspectRatio="none">
+                <path
+                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118.08,130.83,119.34,196.39,102.26Q258.84,86.29,321.39,56.44Z"
+                    class="shape-fill"></path>
+            </svg>
+        </div>
     </section>
 
     <!-- Trust Indicators Bar -->
-    <section class="trust-bar">
+    <section class="trust-bar reveal">
         <div class="container trust-container">
             <div class="trust-item">
                 <i class="ph ph-wrench"></i>
@@ -88,26 +126,90 @@
         </div>
     </section>
 
+    <!-- Brand Compatibility Marquee -->
+    <div class="brands-marquee">
+        <div class="brands-track">
+            <span>SAMSUNG</span><span>SONY</span><span>LG</span><span>PANASONIC</span><span>MI</span><span>ONEPLUS</span><span>TCL</span><span>VU</span><span>HAIER</span>
+            <span>SAMSUNG</span><span>SONY</span><span>LG</span><span>PANASONIC</span><span>MI</span><span>ONEPLUS</span><span>TCL</span><span>VU</span><span>HAIER</span>
+            <span>SAMSUNG</span><span>SONY</span><span>LG</span><span>PANASONIC</span><span>MI</span><span>ONEPLUS</span><span>TCL</span><span>VU</span><span>HAIER</span>
+        </div>
+    </div>
+
     <!-- About Section -->
-    <section id="about" class="section about-section">
+    <section id="about" class="section about-section reveal-slide-left reveal">
         <div class="container about-container">
             <div class="about-content">
-                <h2 class="section-title">Junagadh's Trusted TV Repair Specialist</h2>
-                <p>Khodiyar Electronics provides professional LED and LCD television repair services for customers in Junagadh.</p>
-                <p>From common screen problems to advanced motherboard and display issues, the shop specializes in repairing televisions at the component level.</p>
-                <p>Instead of replacing expensive TVs, customers can restore their televisions with reliable and affordable repair solutions.</p>
-                
-                <ul class="about-list">
-                    <li><i class="ph-fill ph-star"></i> <strong>Experience:</strong> Years of hands-on component-level troubleshooting.</li>
-                    <li><i class="ph-fill ph-cpu"></i> <strong>Technical Skill:</strong> Solving complex problems other centers cannot handle.</li>
-                    <li><i class="ph-fill ph-handshake"></i> <strong>Honest Service:</strong> Repairing instead of pushing for unnecessary replacements.</li>
-                </ul>
+                <h2 class="section-title">Junagadh's Most Trusted TV Repair Specialist</h2>
+                <div class="trust-badges-wrapper mb-2">
+                    <span class="trust-badge-small"><i class="ph-fill ph-certificate"></i> Certified Tech</span>
+                    <span class="trust-badge-small"><i class="ph-fill ph-clock-countdown"></i> 24-48hr Turnaround</span>
+                    <span class="trust-badge-small"><i class="ph-fill ph-shield-check"></i> Honest Guarantee</span>
+                </div>
+                <p>Khodiyar Electronics provides professional LED and LCD television repair services for customers in
+                    Junagadh using advanced Technician Expertise and high-end tools.</p>
+
+                <div class="expertise-grid mt-2">
+                    <div class="expertise-item">
+                        <i class="ph-fill ph-toolbox"></i>
+                        <div>
+                            <h4>Advanced Equipment</h4>
+                            <p>Component-level diagnosis instruments.</p>
+                        </div>
+                    </div>
+                    <div class="expertise-item">
+                        <i class="ph-fill ph-handshake"></i>
+                        <div>
+                            <h4>Honest Guarantee</h4>
+                            <p>No unnecessary part replacements.</p>
+                        </div>
+                    </div>
+                    <div class="expertise-item">
+                        <i class="ph-fill ph-lightning"></i>
+                        <div>
+                            <h4>Fastest Repair Time</h4>
+                            <p>Most repairs completed in 24-48 hours.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="about-image">
-                <div class="about-image-wrapper">
-                    <!-- Placeholder using styling block -->
-                    <div class="placeholder-img"><i class="ph ph-wrench"></i></div>
+                <div class="img-comp-container magnetic-item" id="comp-slider">
+                    <div class="img-comp-img img-comp-after">
+                        <div class="ba-overlay-text">AFTER: Perfect display restored</div>
+                    </div>
+                    <div class="img-comp-img img-comp-before" id="comp-before">
+                        <div class="ba-overlay-text">BEFORE: Screen lines & distortion</div>
+                    </div>
+                    <div class="img-comp-slider" id="comp-thumb"><i class="ph-bold ph-arrows-left-right"></i></div>
                 </div>
+                <p class="text-center mt-2" style="font-size:0.9rem; color:var(--text);"><i
+                        class="ph ph-hand-swipe-left"></i> Drag to see the repair transformation</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="section stats-section text-center">
+        <div class="container stats-container reveal">
+            <div class="stat-box">
+                <i class="ph-fill ph-television"></i>
+                <h3 class="stat-number" data-target="5000">0</h3>
+                <p>TVs Successfully Repaired</p>
+            </div>
+            <div class="stat-box">
+                <i class="ph-fill ph-medal"></i>
+                <h3 class="stat-number" data-target="15">0</h3>
+                <p>Years Experience</p>
+            </div>
+            <div class="stat-box">
+                <i class="ph-fill ph-globe-hemisphere-west"></i>
+                <h3 class="stat-number" data-target="10">0</h3>
+                <p>Top Brands Serviced</p>
+            </div>
+            <div class="stat-box">
+                <i class="ph-fill ph-smiley"></i>
+                <h3 class="stat-number" data-target="100">0</h3><span>%</span>
+                <p>Satisfaction Focused</p>
             </div>
         </div>
     </section>
@@ -115,68 +217,85 @@
     <!-- Services Section -->
     <section id="services" class="section bg-light">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header reveal">
                 <h2 class="section-title text-center">Our TV Repair Services</h2>
-                <p class="section-subtitle text-center">We offer component-level repair to bring your screen back to life.</p>
+                <p class="section-subtitle text-center">We offer component-level repair to bring your screen back to
+                    life.</p>
             </div>
-            
+
             <div class="services-grid">
                 <!-- Service Card 1 -->
-                <div class="service-card">
-                    <div class="service-icon"><i class="ph-fill ph-television"></i></div>
-                    <h3>LED TV Repair</h3>
-                    <p>Comprehensive repair for modern LED TVs with perfect picture restoration.</p>
+                <div class="flip-card reveal reveal-zoom">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front service-card magnetic-item">
+                            <div class="service-icon"><i class="ph-fill ph-television"></i></div>
+                            <h3>LED TV Repair</h3>
+                            <p>Comprehensive repair for modern LED TVs with perfect picture restoration.</p>
+                        </div>
+                        <div class="flip-card-back service-card magnetic-item hover-glow">
+                            <h3>LED Specialization</h3>
+                            <p>We replace backlight strips, fix power boards, and restore panel logic specifically for LED technology.</p>
+                        </div>
+                    </div>
                 </div>
                 <!-- Service Card 2 -->
-                <div class="service-card">
-                    <div class="service-icon"><i class="ph-fill ph-monitor"></i></div>
-                    <h3>LCD TV Repair</h3>
-                    <p>Expert fixing of LCD panels, backlights, and power issues.</p>
+                <div class="flip-card reveal reveal-zoom" style="transition-delay: 0.1s;">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front service-card magnetic-item">
+                            <div class="service-icon"><i class="ph-fill ph-monitor"></i></div>
+                            <h3>LCD TV Repair</h3>
+                            <p>Expert fixing of LCD panels, backlights, and power issues.</p>
+                        </div>
+                        <div class="flip-card-back service-card magnetic-item hover-glow">
+                            <h3>LCD Repair</h3>
+                            <p>We fix typical inverter issues, aged CCFL backlights, and logic board replacements for older LCD models.</p>
+                        </div>
+                    </div>
                 </div>
                 <!-- Service Card 3 -->
-                <div class="service-card">
+                <div class="service-card reveal" style="transition-delay: 0.2s;">
                     <div class="service-icon"><i class="ph-fill ph-lightbulb"></i></div>
                     <h3>Backlight Replacement</h3>
                     <p>Replacement of burnt or dim LED strips behind the panel.</p>
                 </div>
                 <!-- Service Card 4 -->
-                <div class="service-card">
+                <div class="service-card reveal" style="transition-delay: 0.3s;">
                     <div class="service-icon"><i class="ph-fill ph-circuitry"></i></div>
                     <h3>Motherboard Repair</h3>
                     <p>Advanced component-level repair of logic and main boards.</p>
                 </div>
                 <!-- Service Card 5 -->
-                <div class="service-card">
+                <div class="service-card reveal" style="transition-delay: 0.4s;">
                     <div class="service-icon"><i class="ph-fill ph-plug"></i></div>
                     <h3>HDMI Port Repair</h3>
                     <p>Fixing loose, broken, or non-responsive HDMI connections.</p>
                 </div>
                 <!-- Service Card 6 -->
-                <div class="service-card">
+                <div class="service-card reveal" style="transition-delay: 0.5s;">
                     <div class="service-icon"><i class="ph-fill ph-cpu"></i></div>
                     <h3>T-Con Board Repair</h3>
                     <p>Resolving timing and display-processing problems efficiently.</p>
                 </div>
                 <!-- Service Card 7 -->
-                <div class="service-card">
+                <div class="service-card reveal" style="transition-delay: 0.6s;">
                     <div class="service-icon"><i class="ph-fill ph-squares-four"></i></div>
                     <h3>Display Line Repair</h3>
                     <p>Panel line repair using advanced bonding techniques.</p>
                 </div>
                 <!-- Service Card 8 -->
-                <div class="service-card">
+                <div class="service-card reveal" style="transition-delay: 0.7s;">
                     <div class="service-icon"><i class="ph-fill ph-lightning"></i></div>
                     <h3>Power Supply Repair</h3>
                     <p>Fixing boards damaged by voltage surges and fluctuations.</p>
                 </div>
                 <!-- Service Card 9 -->
-                <div class="service-card">
+                <div class="service-card reveal" style="transition-delay: 0.8s;">
                     <div class="service-icon"><i class="ph-fill ph-warning-octagon"></i></div>
                     <h3>Voltage Damage Repair</h3>
                     <p>Restoring circuits burnt from high voltage shock.</p>
                 </div>
                 <!-- Service Card 10 -->
-                <div class="service-card">
+                <div class="service-card reveal" style="transition-delay: 0.9s;">
                     <div class="service-icon"><i class="ph-fill ph-shield-check"></i></div>
                     <h3>Multi-Brand TV Repair</h3>
                     <p>We service Sony, Samsung, LG, Panasonic, and all major brands.</p>
@@ -185,40 +304,103 @@
         </div>
     </section>
 
+    <!-- Interactive Tools Section -->
+    <section class="section interactive-tools bg-dark">
+        <div class="container">
+            <div class="section-header reveal text-center">
+                <h2 class="section-title text-white">Smart Repair Tools</h2>
+                <p class="section-subtitle" style="color: #94A3B8;">Get instant diagnostics and cost estimates.</p>
+            </div>
+
+            <div class="tools-grid">
+                <!-- Diagnostic Tool -->
+                <div class="tool-card reveal">
+                    <h3><i class="ph-fill ph-stethoscope"></i> TV Diagnostic Tool</h3>
+                    <p>Select your TV's symptom to see what might be wrong:</p>
+                    <select id="diag-symptom" class="tool-input">
+                        <option value="">-- Choose Symptom --</option>
+                        <option value="sound_no_pic">Sound but no picture</option>
+                        <option value="lines">Lines on screen</option>
+                        <option value="no_power">TV not turning on</option>
+                        <option value="hdmi">HDMI not working</option>
+                    </select>
+                    <div id="diag-result" class="tool-result hidden"></div>
+                </div>
+
+                <!-- Cost Estimator -->
+                <div class="tool-card reveal" style="transition-delay: 0.2s;">
+                    <h3><i class="ph-fill ph-calculator"></i> Repair Cost Estimator</h3>
+                    <p>Get a rough estimate for your repair:</p>
+                    <div class="estimator-form">
+                        <select id="est-type" class="tool-input mb-2">
+                            <option value="">-- TV Type --</option>
+                            <option value="led">LED TV</option>
+                            <option value="lcd">LCD TV</option>
+                            <option value="smart">Smart / Android TV</option>
+                        </select>
+                        <select id="est-size" class="tool-input mb-2">
+                            <option value="">-- Screen Size --</option>
+                            <option value="32">Up to 32"</option>
+                            <option value="43">40" - 43"</option>
+                            <option value="55">50" - 55"</option>
+                            <option value="65">65" and above</option>
+                        </select>
+                        <select id="est-problem" class="tool-input mb-2">
+                            <option value="">-- Problem --</option>
+                            <option value="backlight">Backlight / No Picture</option>
+                            <option value="motherboard">Dead / Motherboard</option>
+                            <option value="panel">Display bonding / Lines</option>
+                        </select>
+                        <button id="est-btn" class="btn btn-accent w-100 mt-2">Get Estimate</button>
+                    </div>
+                    <div id="est-result" class="tool-result hidden"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Problem / Solution Section -->
     <section class="section problem-section">
         <div class="container container-sm">
-            <h2 class="section-title text-center">Common TV Problems We Fix</h2>
+            <h2 class="section-title text-center reveal">Common TV Problems We Fix</h2>
             <div class="problems-list">
-                <div class="problem-item">
+                <div class="problem-item problem-clickable reveal"
+                    onclick="document.getElementById('diag-symptom').value='sound_no_pic'; document.getElementById('diag-symptom').dispatchEvent(new Event('change')); document.getElementById('diag-symptom').scrollIntoView({behavior: 'smooth', block: 'center'});">
                     <div class="problem-icon"><i class="ph ph-speaker-high"></i></div>
                     <div class="problem-content">
                         <h4>TV has sound but no picture</h4>
-                        <p>Usually a backlight or inverter issue. We can replace the LEDs safely.</p>
+                        <p>Usually a backlight or inverter issue. We can replace the LEDs safely. <span
+                                style="color:var(--primary); font-size:0.8rem;">Click to diagnose &rarr;</span></p>
                     </div>
                 </div>
-                <div class="problem-item">
+                <div class="problem-item problem-clickable reveal" style="transition-delay: 0.1s;"
+                    onclick="document.getElementById('diag-symptom').value='lines'; document.getElementById('diag-symptom').dispatchEvent(new Event('change')); document.getElementById('diag-symptom').scrollIntoView({behavior: 'smooth', block: 'center'});">
                     <div class="problem-icon"><i class="ph ph-subtract-square"></i></div>
                     <div class="problem-content">
                         <h4>Screen lines or flickering</h4>
-                        <p>Often caused by T-Con board faults or panel ribbon cables, which we re-bond.</p>
+                        <p>Often caused by T-Con board faults or panel ribbon cables, which we re-bond. <span
+                                style="color:var(--primary); font-size:0.8rem;">Click to diagnose &rarr;</span></p>
                     </div>
                 </div>
-                <div class="problem-item">
+                <div class="problem-item problem-clickable reveal" style="transition-delay: 0.2s;"
+                    onclick="document.getElementById('diag-symptom').value='hdmi'; document.getElementById('diag-symptom').dispatchEvent(new Event('change')); document.getElementById('diag-symptom').scrollIntoView({behavior: 'smooth', block: 'center'});">
                     <div class="problem-icon"><i class="ph ph-plug-x"></i></div>
                     <div class="problem-content">
                         <h4>HDMI port not working</h4>
-                        <p>We replace the damaged HDMI ports directly on the motherboard.</p>
+                        <p>We replace the damaged HDMI ports directly on the motherboard. <span
+                                style="color:var(--primary); font-size:0.8rem;">Click to diagnose &rarr;</span></p>
                     </div>
                 </div>
-                <div class="problem-item">
+                <div class="problem-item problem-clickable reveal" style="transition-delay: 0.3s;"
+                    onclick="document.getElementById('diag-symptom').value='no_power'; document.getElementById('diag-symptom').dispatchEvent(new Event('change')); document.getElementById('diag-symptom').scrollIntoView({behavior: 'smooth', block: 'center'});">
                     <div class="problem-icon"><i class="ph ph-power"></i></div>
                     <div class="problem-content">
                         <h4>TV not turning on or Boot issues</h4>
-                        <p>A sign of power supply failure or software corruption we can reprogram.</p>
+                        <p>A sign of power supply failure or software corruption we can reprogram. <span
+                                style="color:var(--primary); font-size:0.8rem;">Click to diagnose &rarr;</span></p>
                     </div>
                 </div>
-                <div class="problem-item">
+                <div class="problem-item reveal" style="transition-delay: 0.4s;">
                     <div class="problem-icon"><i class="ph ph-aperture"></i></div>
                     <div class="problem-content">
                         <h4>Display distortion / Colors bleeding</h4>
@@ -230,44 +412,44 @@
     </section>
 
     <!-- Why Choose Us Section -->
-    <section class="section bg-light why-choose-us">
+    <section class="section bg-light why-choose-us reveal">
         <div class="container">
             <div class="why-container">
-                <div class="why-image">
+                <div class="why-image zoom-hover">
                     <div class="placeholder-img bg-dark"><i class="ph ph-thumbs-up"></i></div>
                 </div>
                 <div class="why-content">
                     <h2 class="section-title">Why Customers Choose Khodiyar Electronics</h2>
                     <ul class="why-list">
-                        <li>
+                        <li class="reveal">
                             <i class="ph-fill ph-check-circle"></i>
                             <div>
                                 <strong>Experienced TV repair technician</strong>
                                 <p>Years of specialized training exclusively for televisions.</p>
                             </div>
                         </li>
-                        <li>
+                        <li class="reveal" style="transition-delay: 0.1s;">
                             <i class="ph-fill ph-check-circle"></i>
                             <div>
                                 <strong>Advanced repair tools and techniques</strong>
                                 <p>Component-level diagnosis instruments and high-quality parts.</p>
                             </div>
                         </li>
-                        <li>
+                        <li class="reveal" style="transition-delay: 0.2s;">
                             <i class="ph-fill ph-check-circle"></i>
                             <div>
                                 <strong>Affordable repair instead of replacement</strong>
                                 <p>Save thousands of rupees by repairing instead of discarding.</p>
                             </div>
                         </li>
-                        <li>
+                        <li class="reveal" style="transition-delay: 0.3s;">
                             <i class="ph-fill ph-check-circle"></i>
                             <div>
                                 <strong>Multi-brand repair support</strong>
                                 <p>All major brands, from domestic to imported models.</p>
                             </div>
                         </li>
-                        <li>
+                        <li class="reveal" style="transition-delay: 0.4s;">
                             <i class="ph-fill ph-check-circle"></i>
                             <div>
                                 <strong>Trusted local service</strong>
@@ -283,58 +465,218 @@
     <!-- Repair Process Section -->
     <section class="section process-section">
         <div class="container">
-            <h2 class="section-title text-center">Our Simple Repair Process</h2>
-            <div class="process-steps">
-                <!-- Step 1 -->
-                <div class="process-step">
-                    <div class="step-number">1</div>
-                    <h3>Contact Us</h3>
-                    <p>Call or bring in your TV describing the symptoms.</p>
+            <h2 class="section-title text-center reveal">Animated Repair Timeline</h2>
+            <div class="timeline-container mt-2" id="repair-timeline">
+                <div class="timeline-line"><div class="timeline-line-fill" id="timeline-fill"></div></div>
+                <div class="process-steps">
+                    <!-- Step 1 -->
+                    <div class="process-step reveal">
+                        <div class="step-number">1</div>
+                        <h3>Diagnosis</h3>
+                        <p>We accurately spot the problem at the component level.</p>
+                    </div>
+                    <!-- Step 2 -->
+                    <div class="process-step reveal" style="transition-delay: 0.2s;">
+                        <div class="step-number">2</div>
+                        <h3>Component Repair</h3>
+                        <p>We apply our advanced fix utilizing quality spares.</p>
+                    </div>
+                    <!-- Step 3 -->
+                    <div class="process-step reveal" style="transition-delay: 0.4s;">
+                        <div class="step-number">3</div>
+                        <h3>Testing</h3>
+                        <p>Rigorous stress-testing of the repaired circuits.</p>
+                    </div>
+                    <!-- Step 4 -->
+                    <div class="process-step reveal" style="transition-delay: 0.6s;">
+                        <div class="step-number">4</div>
+                        <h3>Delivery</h3>
+                        <p>Watch your favorite shows fully restored.</p>
+                    </div>
                 </div>
-                <!-- Step 2 -->
-                <div class="process-step">
-                    <div class="step-number">2</div>
-                    <h3>TV Diagnosis</h3>
-                    <p>We accurately spot the problem at the component level.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section testimonials-section bg-light">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2 class="section-title text-center">What Our Customers Say</h2>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card reveal">
+                    <div class="stars">
+                        <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                            class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                    </div>
+                    <p class="review-text">"My Sony LED TV suddenly had no picture, only sound. Another shop told me to
+                        replace the expensive panel. Khodiyar Electronics replaced the backlight LEDs the same day and
+                        saved me thousands! Highly recommended."</p>
+                    <div class="customer-info">
+                        <strong>- Ramesh P., Junagadh</strong>
+                    </div>
                 </div>
-                <!-- Step 3 -->
-                <div class="process-step">
-                    <div class="step-number">3</div>
-                    <h3>Expert Repair</h3>
-                    <p>We apply our advanced fix utilizing quality spares.</p>
+                <div class="testimonial-card reveal" style="transition-delay: 0.2s;">
+                    <div class="stars">
+                        <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                            class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                    </div>
+                    <p class="review-text">"Excellent and honest service. They diagnosed my Samsung TV's motherboard
+                        issue rather than throwing it out. Quick turnaround and very polite technician."</p>
+                    <div class="customer-info">
+                        <strong>- Amit V., Junagadh</strong>
+                    </div>
                 </div>
-                <!-- Step 4 -->
-                <div class="process-step">
-                    <div class="step-number">4</div>
-                    <h3>Enjoy Your TV</h3>
-                    <p>Watch your favorite shows fully restored.</p>
+                <div class="testimonial-card reveal" style="transition-delay: 0.4s;">
+                    <div class="stars">
+                        <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                            class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                    </div>
+                    <p class="review-text">"Had vertical lines on my display. They used their bonding machine and fixed
+                        it perfectly. The TV looks as good as new. The expertise here is unmatched in the city."</p>
+                    <div class="customer-info">
+                        <strong>- Sanjay D., Junagadh</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section faq-section">
+        <div class="container container-sm">
+            <h2 class="section-title text-center reveal">Frequently Asked Questions</h2>
+            <div class="faq-container">
+                <div class="faq-item reveal">
+                    <button class="faq-question">
+                        <span>Why does my TV have sound but no picture?</span>
+                        <i class="ph ph-caret-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>This is almost always a failure of the backlight LEDs behind the screen. We can carefully
+                            replace these LED strips, bringing your picture back to life perfectly.</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal" style="transition-delay: 0.1s;">
+                    <button class="faq-question">
+                        <span>Can LED TV backlight be repaired?</span>
+                        <i class="ph ph-caret-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes, absolutely. Once diagnosed, we safely disassemble the TV and install a brand-new array
+                            of original LED strips, preventing the issue from returning soon.</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal" style="transition-delay: 0.2s;">
+                    <button class="faq-question">
+                        <span>Is it worth repairing an older LED/LCD TV?</span>
+                        <i class="ph ph-caret-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>In 80% of cases, yes! New TVs are expensive. If the panel (the physical screen glass) is
+                            unbroken, repairing the internal circuits is highly cost-effective and will give your TV
+                            many more years of life.</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal" style="transition-delay: 0.3s;">
+                    <button class="faq-question">
+                        <span>Which TV brands do you service?</span>
+                        <i class="ph ph-caret-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We work on ALL major and localized brands, including Sony, Samsung, LG, Panasonic, MI, TCL,
+                            OnePlus, Videocon, and Haier.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Service Area Section -->
-    <section class="section bg-light text-center">
+    <section class="section bg-light text-center reveal">
         <div class="container container-sm">
-            <i class="ph ph-map-pin-line" style="font-size: 48px; color: var(--primary); margin-bottom: 20px;"></i>
+            <i class="ph-fill ph-map-pin map-marker-bounce" style="font-size: 48px; color: var(--primary); margin-bottom: 20px;"></i>
             <h2 class="section-title">Serving Junagadh</h2>
-            <p>Khodiyar Electronics proudly serves customers across Junagadh and nearby areas with reliable TV repair services. We are Junagadh's trusted local source for making expensive televisions last longer.</p>
+            <p>Khodiyar Electronics proudly serves customers across Junagadh and nearby areas. Visit our shop or call us
+                for guidance.</p>
+
+            <div class="map-container mt-2">
+                <p style="margin-bottom: 15px; font-size: 1.1rem; font-weight: 500; color: var(--heading);">
+                    <i class="ph-fill ph-map-pin" style="color: var(--primary);"></i> 6 Talav Street, Vanzari Chowk,
+                    Talav Gate, Junagadh, Gujarat 362001
+                </p>
+                <iframe
+                    src="https://maps.google.com/maps?q=6+Talav+Street,+Vanzari+Chowk,+Talav+Gate,+Junagadh,+Gujarat+362001&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                    width="100%" height="350"
+                    style="border:0; border-radius:16px; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);"
+                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
         </div>
     </section>
 
     <!-- Strong Call to Action Section -->
-    <section id="contact" class="cta-section">
-        <div class="container text-center">
-            <h2 class="cta-headline">TV Not Working?</h2>
-            <p class="cta-subheadline">Call our repair expert today and get your television fixed quickly.</p>
-            <a href="tel:9925036642" class="btn btn-accent btn-xl cta-button">
-                <i class="ph-fill ph-phone-call"></i> Call 9925036642
-            </a>
+    <section id="contact" class="section cta-section reveal-zoom reveal">
+        <div class="container">
+            <div class="cta-grid">
+                <div class="cta-content">
+                    <h2 class="cta-headline">TV Not Working Before a Big Match or Movie Night?</h2>
+                    <p class="cta-subheadline">Don't let a broken screen ruin your plans! Send a photo of your TV
+                        problem on WhatsApp or request an emergency callback for fast repair.</p>
+                    <div class="cta-buttons">
+                        <a href="tel:9925036642" class="btn btn-secondary btn-xl cta-button"
+                            style="color:var(--primary);">
+                            <i class="ph-fill ph-phone-call"></i> Call 9925036642
+                        </a>
+                        <a href="https://wa.me/919925036642?text=Hi,%20I%20need%20help%20with%20my%20TV%20repair"
+                            class="btn btn-accent btn-xl cta-button" target="_blank">
+                            <i class="ph-fill ph-whatsapp-logo"></i> Book via WhatsApp
+                        </a>
+                    </div>
+                </div>
+                <div class="cta-form-box reveal-slide-right reveal">
+                    <h3 style="color: var(--heading);">Request Instant Callback</h3>
+                    <form id="consult-form" class="consult-form">
+                        <input type="text" placeholder="Your Name" required class="tool-input mb-2">
+                        <input type="tel" placeholder="Phone Number" required class="tool-input mb-2">
+                        <select class="tool-input mb-2" required>
+                            <option value="">Select Problem</option>
+                            <option value="no_picture">Sound but no picture</option>
+                            <option value="lines">Lines on screen</option>
+                            <option value="dead">TV not turning on</option>
+                            <option value="other">Other issue</option>
+                        </select>
+                        <button type="submit" class="btn btn-primary w-100 mt-2">Get Free Callback</button>
+                    </form>
+                    <div id="consult-success" class="hidden mt-2"
+                        style="color:#10B981; font-weight:bold; text-align:center;">Thanks! We will call you shortly.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEO Content Blocks -->
+    <section class="section seo-section bg-dark text-center">
+        <div class="container container-sm">
+            <h3 style="color:var(--white); font-size:1.5rem; margin-bottom:1rem;">Professional TV Repair in Junagadh
+            </h3>
+            <p style="color:#94A3B8; font-size:0.9rem; margin-bottom:1rem;">Khodiyar Electronics is standardizing
+                <strong>LED TV repair Junagadh</strong> and <strong>LCD TV repair Junagadh</strong> by providing
+                transparent, component-level motherboard and panel fixes. Why spend heavily on a new television when
+                your existing setup can often be restored for a fraction of the cost?
+            </p>
+            <p style="color:#94A3B8; font-size:0.9rem;">Whether you are dealing with a dark screen, flickering display,
+                or a completely dead TV, our localized expertise ensures your <strong>TV repair Junagadh</strong> needs
+                are met rapidly, reliably, and affordably.</p>
+            <div style="margin-top:2rem; padding-top:2rem; border-top:1px solid #334155;">
+                <p style="color:var(--white); font-weight:600; margin-bottom:1rem;">Specific TV Problem Guides:</p>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer reveal">
         <div class="container footer-container">
             <div class="footer-brand">
                 <h3><i class="ph-fill ph-television"></i> Khodiyar Electronics</h3>
@@ -353,7 +695,8 @@
                 <h4>Contact Info</h4>
                 <ul>
                     <li><i class="ph-fill ph-phone"></i> 9925036642</li>
-                    <li><i class="ph-fill ph-map-pin"></i> Junagadh, Gujarat, India</li>
+                    <li><i class="ph-fill ph-map-pin"></i> 6 Talav Street, Vanzari Chowk, Talav Gate, Junagadh, Gujarat
+                        362001</li>
                     <li><i class="ph-fill ph-clock"></i> Mon – Sat (Working Days)</li>
                 </ul>
             </div>
@@ -365,7 +708,150 @@
         </div>
     </footer>
 
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/919925036642" target="_blank" class="whatsapp-float-btn pulse-anim hover-glow" aria-label="Chat on WhatsApp">
+        <i class="ph-fill ph-whatsapp-logo"></i>
+    </a>
+
+    <!-- Mobile Sticky Bar -->
+    <div class="mobile-sticky-bar">
+        <a href="tel:9925036642" class="btn btn-primary btn-mobile-call">
+            <i class="ph-fill ph-phone-call"></i> Call Now
+        </a>
+        <a href="https://wa.me/919925036642" class="btn btn-accent btn-mobile-whatsapp" target="_blank">
+            <i class="ph-fill ph-whatsapp-logo"></i> WhatsApp
+        </a>
+    </div>
+
+    <!-- AI Diagnostic Assistant Widget -->
+    <div class="ai-widget-container">
+        <!-- Floating Chat Button -->
+        <button id="ai-chat-btn" class="ai-chat-btn" aria-label="Open AI Diagnostic Assistant">
+            <i class="ph-fill ph-robot"></i>
+        </button>
+
+        <!-- Chat Window -->
+        <div id="ai-chat-window" class="ai-chat-window">
+            <div class="ai-chat-header">
+                <div>
+                    <h4><i class="ph-ill ph-robot"></i> AI Diagnostic Assistant</h4>
+                    <span class="ai-status">Online - Ask about your TV problem</span>
+                </div>
+                <button id="ai-chat-close" class="ai-chat-close"><i class="ph ph-x"></i></button>
+            </div>
+            <div id="ai-chat-body" class="ai-chat-body">
+                <div class="ai-message bot">
+                    Hello! Describe the problem you are experiencing with your TV (e.g., "sound but no picture", "lines
+                    on screen"), and I'll give you a quick diagnostic!
+                </div>
+            </div>
+            <div class="ai-chat-footer">
+                <input type="text" id="ai-chat-input" placeholder="Type TV symptom here..." />
+                <button id="ai-chat-send"><i class="ph-fill ph-paper-plane-right"></i></button>
+            </div>
+        </div>
+    </div>
+
     <script>
+        // Theme Toggle Logic
+        const themeBtn = document.getElementById('theme-toggle');
+        const themeIcon = themeBtn.querySelector('i');
+
+        // Check local storage for theme
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            if (themeIcon) themeIcon.classList.replace('ph-moon', 'ph-sun');
+        }
+
+        if (themeBtn) {
+            themeBtn.addEventListener('click', () => {
+                if (document.documentElement.getAttribute('data-theme') === 'dark') {
+                    document.documentElement.removeAttribute('data-theme');
+                    localStorage.setItem('theme', 'light');
+                    themeIcon.classList.replace('ph-sun', 'ph-moon');
+                } else {
+                    document.documentElement.setAttribute('data-theme', 'dark');
+                    localStorage.setItem('theme', 'dark');
+                    themeIcon.classList.replace('ph-moon', 'ph-sun');
+                }
+            });
+        }
+
+        // Scroll Progress Logic
+        window.addEventListener('scroll', () => {
+            const scrollTotal = document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (scrollTotal / height) * 100;
+            const progressIndicator = document.getElementById('scroll-progress');
+            if (progressIndicator) {
+                progressIndicator.style.width = scrolled + '%';
+            }
+        });
+
+        // Intersection Observer for scroll animations
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealOptions = {
+            threshold: 0.15,
+            rootMargin: "0px 0px -50px 0px"
+        };
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) {
+                    return;
+                }
+                entry.target.classList.add('active');
+                observer.unobserve(entry.target);
+            });
+        }, revealOptions);
+
+        revealElements.forEach(element => {
+            revealObserver.observe(element);
+        });
+
+        // Stats Counter Animation Observer
+        const counters = document.querySelectorAll('.stat-number');
+        let hasCounted = false;
+
+        const counterObserver = new IntersectionObserver((entries) => {
+            if (entries[0].isIntersecting && !hasCounted) {
+                hasCounted = true;
+                counters.forEach(counter => {
+                    const target = +counter.getAttribute('data-target');
+                    const increment = target / 50;
+
+                    const updateCount = () => {
+                        const count = +counter.innerText;
+                        if (count < target) {
+                            counter.innerText = Math.ceil(count + increment);
+                            setTimeout(updateCount, 40);
+                        } else {
+                            counter.innerText = target + "+";
+                            if (target === 100) counter.innerText = "100";
+                        }
+                    };
+                    updateCount();
+                });
+            }
+        }, { threshold: 0.5 });
+
+        const statsSection = document.querySelector('.stats-section');
+        if (statsSection) {
+            counterObserver.observe(statsSection);
+        }
+
+        // FAQ Accordion Logic
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+            const btn = item.querySelector('.faq-question');
+            btn.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+                // Close all
+                faqItems.forEach(otherItem => otherItem.classList.remove('active'));
+                // Toggle current
+                if (!isActive) item.classList.add('active');
+            });
+        });
+
         // Sticky Header Script
         const header = document.querySelector('.header');
         window.addEventListener('scroll', () => {
@@ -379,7 +865,7 @@
         // Mobile Menu Toggle
         const menuBtn = document.querySelector('.mobile-menu-btn');
         const nav = document.querySelector('.nav');
-        
+
         menuBtn.addEventListener('click', () => {
             nav.classList.toggle('active');
         });
@@ -391,6 +877,229 @@
                 nav.classList.remove('active');
             });
         });
+
+        // AI Chatbot Logic
+        const chatBtn = document.getElementById('ai-chat-btn');
+        const chatWindow = document.getElementById('ai-chat-window');
+        const chatCloseBtn = document.getElementById('ai-chat-close');
+        const chatInput = document.getElementById('ai-chat-input');
+        const chatSendBtn = document.getElementById('ai-chat-send');
+        const chatBody = document.getElementById('ai-chat-body');
+
+        let isFirstOpen = true;
+
+        // Toggle chat window
+        chatBtn.addEventListener('click', () => {
+            chatWindow.classList.add('open');
+            chatBtn.style.transform = "scale(0)";
+            chatInput.focus();
+            if (isFirstOpen) {
+                setTimeout(addSuggestionChips, 600);
+                isFirstOpen = false;
+            }
+        });
+
+        chatCloseBtn.addEventListener('click', () => {
+            chatWindow.classList.remove('open');
+            chatBtn.style.transform = "scale(1)";
+        });
+
+        // Add message safely
+        function appendMessage(sender, text) {
+            const msgDiv = document.createElement('div');
+            msgDiv.classList.add('ai-message', sender);
+
+            const textSpan = document.createElement('span');
+            textSpan.textContent = text;
+            msgDiv.appendChild(textSpan);
+
+            const timeSpan = document.createElement('span');
+            timeSpan.classList.add('message-time');
+            const now = new Date();
+            timeSpan.textContent = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+            msgDiv.appendChild(timeSpan);
+
+            chatBody.appendChild(msgDiv);
+            chatBody.scrollTop = chatBody.scrollHeight;
+        }
+
+        // Add typing indicator
+        function appendTypingIndicator() {
+            const typingDiv = document.createElement('div');
+            typingDiv.classList.add('ai-message', 'bot', 'typing-indicator');
+            typingDiv.id = 'typing-indicator';
+            typingDiv.innerHTML = '<span>.</span><span>.</span><span>.</span>';
+            chatBody.appendChild(typingDiv);
+            chatBody.scrollTop = chatBody.scrollHeight;
+        }
+
+        function removeTypingIndicator() {
+            const typingDiv = document.getElementById('typing-indicator');
+            if (typingDiv) {
+                typingDiv.remove();
+            }
+        }
+
+        function addSuggestionChips() {
+            const chipsDiv = document.createElement('div');
+            chipsDiv.classList.add('ai-chips');
+            chipsDiv.id = 'ai-chips';
+            const suggestions = ["Cost Estimate", "No Power", "Lines on Screen", "Location"];
+
+            suggestions.forEach(text => {
+                const chip = document.createElement('button');
+                chip.classList.add('ai-chip');
+                chip.textContent = text;
+                chip.onclick = () => {
+                    chatInput.value = text;
+                    handleUserMessage();
+                    const existingChips = document.getElementById('ai-chips');
+                    if (existingChips) existingChips.remove();
+                };
+                chipsDiv.appendChild(chip);
+            });
+            chatBody.appendChild(chipsDiv);
+            chatBody.scrollTop = chatBody.scrollHeight;
+        }
+
+        // Advanced Knowledge Base
+        const knowledgeBase = [
+            { keywords: ['sound', 'no picture', 'black screen', 'dark screen'], reply: "This is a classic symptom of burnt backlight LEDs. In 90% of cases, completely changing the LED strip array solves this safely. Would you like to schedule a repair by calling 9925036642?" },
+            { keywords: ['line', 'lines', 'flicker', 'flickering', 'jumping', 'ghosting'], reply: "Screen lines and flickering are often caused by loose panel ribbons or a bad T-Con board. We specialize in Display Line re-bonding! Get this checked before the screen entirely fails." },
+            { keywords: ['power', 'turn on', 'dead', 'red light', 'standby', 'blinking', 'no power'], reply: "A TV that won't turn on or shows a blinking standby light likely has a failed Power Supply Board or Motherboard. This often happens due to voltage spikes. We repair circuits directly to save costs!" },
+            { keywords: ['hdmi', 'port', 'no signal', 'cable'], reply: "HDMI ports can get physically damaged or shorted. We often desolder and install brand new HDMI ports right on the motherboard, saving you from replacing the whole board!" },
+            { keywords: ['price', 'cost', 'how much', 'estimate', 'charge'], reply: "Since we repair components at the micro-level instead of replacing entire boards, our costs are usually a fraction of buying a new TV! Call 9925036642 with your TV model for an exact quote." },
+            { keywords: ['where', 'location', 'address', 'shop', 'visit'], reply: "We are proudly located in Junagadh, Gujarat. Please call us at 9925036642 to get the exact shop directions or to schedule a drop-off." },
+            { keywords: ['brand', 'samsung', 'lg', 'sony', 'panasonic', 'mi', 'oneplus', 'tcl'], reply: "Yes! We specialize in multi-brand repair and have original spare parts for Samsung, LG, Sony, MI, OnePlus, TCL, and all other major TV brands." },
+            { keywords: ['hi', 'hello', 'hey', 'start', 'good morning'], reply: "Hello there! I'm the Khodiyar AI Assistant. How can I help you with your TV today?" },
+            { keywords: ['time', 'how long', 'duration', 'days'], reply: "Most common repairs like backlight replacement or power supply issues are completed within 24-48 hours depending on parts availability." }
+        ];
+
+        function getBotResponse(input) {
+            const text = input.toLowerCase();
+            let bestMatch = null;
+            let highestScore = 0;
+
+            knowledgeBase.forEach(entry => {
+                let score = 0;
+                entry.keywords.forEach(kw => {
+                    if (text.includes(kw)) score++;
+                });
+                if (score > highestScore) {
+                    highestScore = score;
+                    bestMatch = entry.reply;
+                }
+            });
+
+            if (highestScore > 0) return bestMatch;
+            return "That sounds like an issue our expert technician can fix! Since electronics diagnostics can be complex, giving us a call at 9925036642 is the best way to get a fast solution.";
+        }
+
+        // Main chatbot response generation
+        function handleUserMessage() {
+            const text = chatInput.value.trim();
+            if (!text) return;
+
+            appendMessage('user', text);
+            chatInput.value = '';
+
+            // Remove chips if user typed instead
+            const existingChips = document.getElementById('ai-chips');
+            if (existingChips) existingChips.remove();
+
+            appendTypingIndicator();
+
+            setTimeout(() => {
+                removeTypingIndicator();
+                const botReply = getBotResponse(text);
+                appendMessage('bot', botReply);
+            }, 1000 + Math.random() * 800); // 1-1.8s random delay
+        }
+
+        // Send events
+        chatSendBtn.addEventListener('click', handleUserMessage);
+        chatInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') handleUserMessage();
+        });
+
+        // Diagnostic Tool Logic
+        const diagSymptom = document.getElementById('diag-symptom');
+        const diagResult = document.getElementById('diag-result');
+        if (diagSymptom && diagResult) {
+            diagSymptom.addEventListener('change', (e) => {
+                const val = e.target.value;
+                diagResult.classList.remove('hidden');
+                if (val === 'sound_no_pic') {
+                    diagResult.innerHTML = '<strong>Diagnosis:</strong> Likely a Backlight LED failure.<br><strong>Action:</strong> We can safely replace the LED strips. Call us to book!';
+                    diagResult.style.backgroundColor = '#ECFDF5';
+                    diagResult.style.color = '#065F46';
+                } else if (val === 'lines') {
+                    diagResult.innerHTML = '<strong>Diagnosis:</strong> T-Con board or panel bonding issue.<br><strong>Action:</strong> Requires advanced bonding machine (available at our shop). Bring TV for checkup.';
+                    diagResult.style.backgroundColor = '#FEF2F2';
+                    diagResult.style.color = '#991B1B';
+                } else if (val === 'no_power') {
+                    diagResult.innerHTML = '<strong>Diagnosis:</strong> Power Supply or Motherboard failure.<br><strong>Action:</strong> Unplug TV to prevent more damage. We will fix the burnt circuits.';
+                    diagResult.style.backgroundColor = '#FFFBEB';
+                    diagResult.style.color = '#92400E';
+                } else if (val === 'hdmi') {
+                    diagResult.innerHTML = '<strong>Diagnosis:</strong> Shorted HDMI logic or physical port damage.<br><strong>Action:</strong> We can desolder and replace the port directly.';
+                    diagResult.style.backgroundColor = '#EFF6FF';
+                    diagResult.style.color = '#1E40AF';
+                } else {
+                    diagResult.classList.add('hidden');
+                }
+            });
+        }
+
+        // Repair Cost Estimator Logic
+        const estBtn = document.getElementById('est-btn');
+        const estResult = document.getElementById('est-result');
+        if (estBtn && estResult) {
+            estBtn.addEventListener('click', () => {
+                const type = document.getElementById('est-type').value;
+                const size = document.getElementById('est-size').value;
+                const prob = document.getElementById('est-problem').value;
+
+                if (!type || !size || !prob) {
+                    estResult.classList.remove('hidden');
+                    estResult.innerHTML = 'Please select TV Type, Size, and Problem.';
+                    estResult.style.backgroundColor = '#FEF2F2';
+                    estResult.style.color = '#991B1B';
+                    return;
+                }
+
+                // Very rough mock estimation logic
+                let base = 800; // INR
+                if (prob === 'backlight') base += (size * 30);
+                if (prob === 'motherboard') base += (size * 40);
+                if (prob === 'panel') base += 2500;
+
+                if (size === '55' || size === '65') base += 1000;
+
+                const max = base + 1500;
+
+                estResult.classList.remove('hidden');
+                estResult.innerHTML = `<strong>Estimated Range:</strong> ₹${base} - ₹${max}<br><span style="font-size:0.8rem; margin-top:5px; display:block;">*Final cost given after physical inspection.</span>`;
+                estResult.style.backgroundColor = '#ECFDF5';
+                estResult.style.color = '#065F46';
+            });
+        }
+
+        // Consult Form Submmission Mock
+        const consultForm = document.getElementById('consult-form');
+        const consultSuccess = document.getElementById('consult-success');
+        if (consultForm) {
+            consultForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                consultForm.style.display = 'none';
+                consultSuccess.classList.remove('hidden');
+            });
+        }
     </script>
+
+    <!-- Lenis & Premium Interactions -->
+    <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
+    <script src="premium.js"></script>
 </body>
+
 </html>
